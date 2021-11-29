@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+* {
+    font-family: Montserrat;
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  .card {
+    width: fit-content;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    padding: 1rem;
+   
+  }
+  
+  .card-header {
+    background: #33ffa0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    transform: skewY(-3deg);
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    
+  }
+  
+  .card-body {
+    margin-top: 2rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  input {
+    border: none;
+    padding: 0.5rem 0.1rem;
+    width: 100%;
+    border-radius: 2px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.5s;
+
+  }
+  
+  input:focus {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  button {
+    background: #33ffa0 !important;
+    color: black !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  .chatrooms {
+    margin-top: 1rem;
+  }
+  
+  .chatroom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .join {
+    background: #33ffa0;
+    padding: 0.25rem 1rem;
+    border-radius: 2px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
