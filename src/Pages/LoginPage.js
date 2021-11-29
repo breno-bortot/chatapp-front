@@ -1,10 +1,29 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
 
 function LoginPage() {
     return (
-        <div>
-             Login Page
-        </div>
+       <Card>
+           <Card.Header>Login</Card.Header>
+           <Card.Body>
+           <Form>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>CPF</Form.Label>
+                    <Form.Control type="number" placeholder="Insira seu CPF" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Senha</Form.Label>
+                    <Form.Control type="password" placeholder="Insira sua Senha" />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Entrar
+                </Button>
+            </Form>
+           </Card.Body>
+       </Card>
     );
 };
 
