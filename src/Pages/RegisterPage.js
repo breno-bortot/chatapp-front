@@ -51,7 +51,7 @@ function RegisterPage() {
     };
     return (
         
-        <Card className="my-3">
+        <Card className="my-5 container d-flex justify-content-center align-items-center">
             <Card.Header>Criar Conta</Card.Header>
             <Card.Body >
              <Form onKeyUp={handleEnter}>

@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import makeToast from '../Components/toast';
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 
 import Card from 'react-bootstrap/Card';
@@ -30,6 +31,9 @@ function LoginPage() {
         }).then(response => {
             console.log(response);
             makeToast('success', response.data.message);
+            // console.log(response.data.token)
+            sessionStorage.setItem('CHAT_TOKEN', response.data.token);
+            sessionStorage.setItem('USER_ID', response.data.userId);
             navigate('/dashboard');
         }).catch(error => {
             console.log(error.response);
@@ -53,6 +57,12 @@ function LoginPage() {
                     <Button className='mt-2' onClick={loginUser}>
                         Entrar
                     </Button>
+                   
+                    <Link to="user/register">
+                        <Button vatiant='info' className='mt-2 createBtn' >
+                            Criar Conta
+                        </Button>
+                    </Link>
                 </Form>
             </Card.Body>
         </Card>
