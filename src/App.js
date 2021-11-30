@@ -6,19 +6,27 @@ import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
 
 import './styles/App.css';
+import Container from 'react-bootstrap/Container';
+import Navbar from './Components/navbar';
+import EditPage from './Pages/EditPage';
 
 function App() {
   return (
 
     
       <BrowserRouter>
-          
-            <Routes>
-              <Route exact path="/" element={<IndexPage />}/>
-              <Route path="user/register" element={<RegisterPage />}/>
-              <Route path="user/login" element={<LoginPage />}/>
-              <Route path="/dashboard" element={<DashboardPage />}/>
-            </Routes>
+          <Container className="col-lg-6 col-md-8 col-sm-8 col-xs-8"> 
+            <Navbar />
+              <Routes>
+                <Route exact path="/" element={<IndexPage />}/>
+                <Route exact path="/user/login" element={<LoginPage />}/>
+                <Route exact path="/dashboard" element={<DashboardPage />}/>
+                <Route exact path="/user/register" element={<RegisterPage />}/>
+                <Route exact path="/user/edit/:id" element={<EditPage />}/>
+                
+                
+              </Routes>
+          </Container>
         
       </BrowserRouter>
   

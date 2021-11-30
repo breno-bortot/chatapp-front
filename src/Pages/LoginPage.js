@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import makeToast from '../Components/toast';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 
-
+import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -20,6 +20,10 @@ function LoginPage() {
             loginUser();
         }
     };
+
+    const redirect = () =>{
+        navigate('/user/register');
+    }
 
     const loginUser = () =>{
         const cpf = cpfRef.current.value;
@@ -41,31 +45,29 @@ function LoginPage() {
         });
     };
     return (
-            
-        <Card className="position-absolute top-50 start-50 translate-middle">
-            <Card.Header>Login</Card.Header>
-                <Card.Body>
-                <Form onKeyUp={handleEnter}>
-                    <Form.Group className="form-group mb-3" controlId="formCPF">
-                        <Form.Label>CPF</Form.Label>
-                        <Form.Control type="number" ref={cpfRef} placeholder="Insira seu CPF" />
-                    </Form.Group>
-                    <Form.Group className="form-group mb-3" controlId="formBasicPassword">
-                        <Form.Label>Senha</Form.Label>
-                        <Form.Control type="password" ref={passwordRef} placeholder="Insira sua Senha" />
-                    </Form.Group>
-                    <Button className='mt-2' onClick={loginUser}>
-                        Entrar
-                    </Button>
-                   
-                    <Link to="user/register">
-                        <Button vatiant='info' className='mt-2 createBtn' >
-                            Criar Conta
+         
+            <Card>
+                <Card.Header>Login</Card.Header>
+                    <Card.Body>
+                    <Form onKeyUp={handleEnter}>
+                        <Form.Group className="form-group mb-3" controlId="formCPF">
+                            <Form.Label>CPF</Form.Label>
+                            <Form.Control type="number" ref={cpfRef} placeholder="Insira seu CPF" />
+                        </Form.Group>
+                        <Form.Group className="form-group mb-3" controlId="formBasicPassword">
+                            <Form.Label>Senha</Form.Label>
+                            <Form.Control type="password" ref={passwordRef} placeholder="Insira sua Senha" />
+                        </Form.Group>
+                        <Button className='mt-2' onClick={loginUser}>
+                            Entrar
                         </Button>
-                    </Link>
-                </Form>
-            </Card.Body>
-        </Card>
+                        <Button className='mt-2 createBtn'onClick={redirect} >
+                            Criar Conta 
+                        </Button>
+                    </Form>
+                </Card.Body>
+            </Card>
+      
          
       
     );

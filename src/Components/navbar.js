@@ -3,12 +3,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Nav from 'react-bootstrap/Nav';
-// import Link  from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
-function navbar() {
+function NavigationBar() {
+    const navigate = useNavigate();
+
     return (
     <Navbar expand={false}>
-        <Container   fluid>
+        <Container>
             {/* <Navbar.Brand href="#">Menu</Navbar.Brand> */}
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
@@ -17,14 +19,23 @@ function navbar() {
             placement="end"
             >
             <Offcanvas.Header closeButton>
-                <Offcanvas.Title id="offcanvasNavbarLabel">Offcanvas</Offcanvas.Title>
+                <Offcanvas.Title id="offcanvasNavbarLabel">Bate Papo WOW!!</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                {/* <Nav.Link><Link to="/dashboard">Dashboard</Link></Nav.Link> */}
-                <Nav.Link path="/user/register">Criar Conta</Nav.Link>
-                <Nav.Link path="/user/edit/:id">Editar Conta</Nav.Link>
-                <Nav.Link path="/user/delete/:id">Deletar Conta</Nav.Link>
+                
+                <Nav.Link onClick={() =>{
+                    navigate('/dashboard')
+                }} >Dashboard</Nav.Link>
+                <Nav.Link onClick={() =>{
+                    navigate('/user/login')
+                }} >Entrar</Nav.Link>
+                <Nav.Link onClick={() =>{
+                    navigate('/user/register')}} >Criar Conta</Nav.Link>
+                <Nav.Link onClick={() =>{
+                    navigate('/user/edit/:id')}}>Editar Conta</Nav.Link>
+                <Nav.Link onClick={() =>{
+                    navigate('/user/delete/:id')}}>Deletar Conta</Nav.Link>
                 </Nav>
             </Offcanvas.Body>
             </Navbar.Offcanvas>
@@ -33,4 +44,4 @@ function navbar() {
     )
 }
 
-export default navbar
+export default NavigationBar;

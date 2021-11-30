@@ -22,7 +22,6 @@ input[type=number] {
     font-size: 16px;
   }
   .card {
-    width: fit-content;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 4px;
     padding: 2rem;
@@ -40,17 +39,7 @@ input[type=number] {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     
   }
-  .navbar-toggler {
-    padding: 1rem 10rem;
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    font-weight: bold;
-    display: inline-block;
-    position: absolute;
-    top: -6rem;
-    left: -2.5rem;
-  }
+
   
   .card-body {
     margin-top: 2rem;

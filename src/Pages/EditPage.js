@@ -11,7 +11,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router';
 
-function RegisterPage() {
+function EditPage() {
     const navigate = useNavigate();
 
     const nameRef = React.createRef();
@@ -54,7 +54,7 @@ function RegisterPage() {
     return (
         <Container>
             <Card className="container d-flex justify-content-center align-items-center">
-                <Card.Header>Criar Conta</Card.Header>
+                <Card.Header>Editar Conta</Card.Header>
                 <Card.Body >
                 <Form onKeyUp={handleEnter}>
                     <Row xs={1} md={2}>
@@ -98,7 +98,7 @@ function RegisterPage() {
                         </Col>
                     </Row>
                     <Button className='mt-2' onClick={registerUser}>
-                        Criar
+                        Editar
                     </Button>
                 </Form>
                 </Card.Body>
@@ -107,4 +107,4 @@ function RegisterPage() {
     )
 }
 
-export default RegisterPage
+export default EditPage
