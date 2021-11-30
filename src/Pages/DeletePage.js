@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import makeToast from '../Components/toast';
+import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
 
 
@@ -16,18 +17,31 @@ function DeletePage() {
     const userId = sessionStorage.getItem('USER_ID')
 
     const deleteUser = () =>{
-        
-       if(window.confirm('Você está certo disto??')){
-            axios.delete(`http://localhost:5000/user/delete/${userId}`, {
-            }).then(response => {
-                console.log(response);
-                makeToast('success', response.data.message);
-                navigate('/dashboard');
-            }).catch(error => {
-                console.log(error.response);
-                makeToast('error', error.response.data.message);
-            });
-        }
+        Swal.fire({
+            title: 'Você está certo disto?',
+            text: "Sua conta será eliminada!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText:'Cancelar',
+            confirmButtonText: 'Sim, prossiga.'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                axios.delete(`http://localhost:5000/user/delete/${userId}`, {
+                }).then(response => {
+                    console.log(response);
+                    makeToast('success', response.data.message);
+                    navigate('/dashboard');
+                }).catch(error => {
+                    console.log(error.response);
+                    makeToast('error', error.response.data.message);
+                });
+            }
+          })
+      
+           
+       
     };
     return (
          

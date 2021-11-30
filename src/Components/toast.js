@@ -19,4 +19,10 @@ const makeToast = (type, msg) => {
   });
 };
 
+Swal.bindClickHandler()
+
+Swal.mixin({
+  toast: true,
+}).bindClickHandler('data-swal-toast-template')
+
 export default makeToast;
