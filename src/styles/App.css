@@ -54,7 +54,7 @@ input[type=number] {
     font-weight: bold;
   }
   
-  input {
+  .form-control {
     border: none;
     padding: 0.5rem 0.1rem;
     width: 100%;
@@ -64,7 +64,7 @@ input[type=number] {
 
   }
   
-  input:focus {
+  .form-control:focus {
     border-bottom: 1px solid #ccc;
   }
   
@@ -81,7 +81,7 @@ input[type=number] {
   }
   
   .chatrooms {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
   .chatroom {
@@ -89,6 +89,7 @@ input[type=number] {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    font-weight: bold;
   }
   
   .join {
