@@ -7,14 +7,23 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useNavigate } from 'react-router';
 
 function RegisterPage() {
+    const navigate = useNavigate();
+
     const nameRef = React.createRef();
     const lastNameRef = React.createRef();
     const phoneRef = React.createRef();
     const cpfRef = React.createRef();
     const passwordRef = React.createRef();
     const passwordCheckRef = React.createRef();
+
+    const handleEnter = (event) => {
+        if(event.keyCode === 13) {
+            registerUser();
+        }
+    };
     
     const registerUser = () =>{
         const name = nameRef.current.value;
@@ -34,8 +43,9 @@ function RegisterPage() {
         }).then(response => {
             console.log(response);
             makeToast('success', response.data.message);
+            navigate('/user/login');
         }).catch(error => {
-            console.log(error.response)
+            console.log(error.response);
             makeToast('error', error.response.data.message);
         });
     };
@@ -44,7 +54,7 @@ function RegisterPage() {
         <Card className="my-3">
             <Card.Header>Criar Conta</Card.Header>
             <Card.Body >
-             <Form>
+             <Form onKeyUp={handleEnter}>
                  <Row xs={1} md={2}>
                      <Col>
                          <Form.Group className="form-group mb-3" controlId="formName">
