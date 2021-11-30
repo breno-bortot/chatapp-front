@@ -46,27 +46,29 @@ function LoginPage() {
     };
     return (
          
-            <Card>
-                <Card.Header>Login</Card.Header>
-                    <Card.Body>
-                    <Form onKeyUp={handleEnter}>
-                        <Form.Group className="form-group mb-3" controlId="formCPF">
-                            <Form.Label>CPF</Form.Label>
-                            <Form.Control type="number" ref={cpfRef} placeholder="Insira seu CPF" />
-                        </Form.Group>
-                        <Form.Group className="form-group mb-3" controlId="formBasicPassword">
-                            <Form.Label>Senha</Form.Label>
-                            <Form.Control type="password" ref={passwordRef} placeholder="Insira sua Senha" />
-                        </Form.Group>
-                        <Button className='mt-2' onClick={loginUser}>
-                            Entrar
-                        </Button>
-                        <Button className='mt-2 createBtn'onClick={redirect} >
-                            Criar Conta 
-                        </Button>
-                    </Form>
-                </Card.Body>
-            </Card>
+            <Container>
+                <Card>
+                    <Card.Header>Login</Card.Header>
+                        <Card.Body>
+                        <Form onKeyUp={handleEnter}>
+                            <Form.Group className="form-group mb-3" controlId="formCPF">
+                                <Form.Label>CPF</Form.Label>
+                                <Form.Control type="number" ref={cpfRef} placeholder="Insira seu CPF" />
+                            </Form.Group>
+                            <Form.Group className="form-group mb-3" controlId="formBasicPassword">
+                                <Form.Label>Senha</Form.Label>
+                                <Form.Control type="password" ref={passwordRef} placeholder="Insira sua Senha" />
+                            </Form.Group>
+                            <Button className='mt-2' onClick={loginUser}>
+                                Entrar
+                            </Button>
+                            <Button className='mt-2 createBtn'onClick={redirect} >
+                                Criar Conta
+                            </Button>
+                        </Form>
+                    </Card.Body>
+                </Card>
+            </Container>
       
          
       

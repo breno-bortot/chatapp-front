@@ -27,6 +27,11 @@ input[type=number] {
     padding: 2rem;
    
   }
+
+  .delete {
+    background: #fa4646 !important;
+    color: whitesmoke !important;
+  }
   
   .card-header {
     background: #33ffa0;

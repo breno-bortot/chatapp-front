@@ -35,7 +35,7 @@ function EditPage() {
         const password = passwordRef.current.value;
         const passwordCheck = passwordCheckRef.current.value;
 
-        axios.post('http://localhost:5000/user/register', {
+        axios.put('http://localhost:5000/user/edit/:id', {
             name,
             lastName,
             phone,

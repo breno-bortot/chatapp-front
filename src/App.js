@@ -9,6 +9,7 @@ import './styles/App.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from './Components/navbar';
 import EditPage from './Pages/EditPage';
+import DeletePage from './Pages/DeletePage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
                 <Route exact path="/dashboard" element={<DashboardPage />}/>
                 <Route exact path="/user/register" element={<RegisterPage />}/>
                 <Route exact path="/user/edit/:id" element={<EditPage />}/>
+                <Route exact path="/user/delete/:id" element={<DeletePage />}/>
                 
                 
               </Routes>
