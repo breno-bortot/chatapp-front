@@ -1,4 +1,38 @@
-# Getting Started with Create React App
+# chatapp-front 
+
+```
+1- Baixar Projeto e abrí-lo com sua IDE de preferência
+```
+## Project setup/ Instalação do Projeto
+```
+( é necessário ter o gerenciador de pacotes YARN instalado, segue link para sua instalação https://classic.yarnpkg.com/en/docs/install#windows-stable )
+
+2- Abrir terminal e efetuar o comando a abaixo:
+
+yarn install
+```
+
+### Compiles and hot-reloads for development/ Compilar para desenvolvimento
+```
+3- No terminal efetuar o comando a abaixo:
+
+yarn start
+
+4- Após compilação correta do app, aparecerá esta menssagem: 
+
+Compiled successfully!
+
+You can now view chatapp-front in the browser.   
+
+  Local:            http://localhost:3000        
+  On Your Network:  http://xxx.xxx.x.xx:3000     
+```
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +102,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ -->
